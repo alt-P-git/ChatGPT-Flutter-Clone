@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:drawable="@drawable/circle_drawable">
+    <target
+        android:name="circle"
+        android:animation="@animator/color_change_animation" />
+</animated-vector>

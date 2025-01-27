@@ -16,3 +16,26 @@
         <item name="android:windowBackground">?android:colorBackground</item>
     </style>
 </resources>
+
+<!--    <?xml version="1.0" encoding="utf-8"?>-->
+<!--<resources>-->
+<!--&lt;!&ndash; Theme for the splash screen &ndash;&gt;-->
+<!--<style name="LaunchTheme" parent="@android:style/Theme.Light.NoTitleBar">-->
+<!--    &lt;!&ndash; Splash Screen background color &ndash;&gt;-->
+<!--    <item name="android:windowSplashScreenBackground">@color/black</item>-->
+
+<!--    &lt;!&ndash; Animated icon for the splash screen &ndash;&gt;-->
+<!--    <item name="android:windowSplashScreenAnimatedIcon">@drawable/color_changing_dot</item>-->
+
+<!--    &lt;!&ndash; Duration for the animation &ndash;&gt;-->
+<!--    <item name="android:windowSplashScreenAnimationDuration">500</item>-->
+
+<!--    &lt;!&ndash; Remove icon background &ndash;&gt;-->
+<!--    <item name="android:windowSplashScreenIconBackgroundColor">@null</item>-->
+<!--</style>-->
+
+<!--&lt;!&ndash; Theme applied when Flutter initializes &ndash;&gt;-->
+<!--<style name="NormalTheme" parent="@android:style/Theme.Light.NoTitleBar">-->
+<!--    <item name="android:windowBackground">?android:colorBackground</item>-->
+<!--</style>-->
+<!--</resources>-->
