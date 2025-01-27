@@ -15,44 +15,44 @@ class _RecommendationState extends State<Recommendation>
 
   final List<Map<String, dynamic>> options = [
     {
-      'icon': Icons.image,
+      'icon': 'assets/icons/createImage.svg',
       'label': 'Create image',
       'color': const Color(0xFF35AE47)
     },
     {
-      'icon': Icons.card_giftcard,
+      'icon': 'assets/icons/surpriseMe.svg',
       'label': 'Surprise me',
       'color': const Color(0xFF76D0EB)
     },
     {
-      'icon': Icons.bar_chart,
+      'icon': 'assets/icons/analyzeData.svg',
       'label': 'Analyze data',
       'color': const Color(0xFF76D0EB)
     },
-    {'icon': Icons.code, 'label': 'Code', 'color': const Color(0xFF6C71FF)},
+    {'icon': 'assets/icons/code.svg', 'label': 'Code', 'color': const Color(0xFF6C71FF)},
     {
-      'icon': Icons.notes,
+      'icon': 'assets/icons/summarizeText.svg',
       'label': 'Summarize text',
       'color': const Color(0xFFEA8444)
     },
-    {'icon': Icons.edit, 'label': 'Help me write', 'color': Colors.pink},
+    {'icon': 'assets/icons/helpMeWrite.svg', 'label': 'Help me write', 'color': const Color(0xFFCB8BD0)},
     {
-      'icon': Icons.image_search,
+      'icon': 'assets/icons/analyzeImages.svg',
       'label': 'Analyze images',
-      'color': const Color(0xFFEA8444)
+      'color': const Color(0xFF6C71FF)
     },
     {
-      'icon': Icons.school,
+      'icon': 'assets/icons/getAdvice.svg',
       'label': 'Get advice',
       'color': const Color(0xFF76D0EB)
     },
     {
-      'icon': Icons.light_mode,
+      'icon': 'assets/icons/makeAPlan.svg',
       'label': 'Make a plan',
       'color': const Color(0xFFE2C541)
     },
     {
-      'icon': Icons.lightbulb,
+      'icon': 'assets/icons/makeAPlan.svg',
       'label': 'Brainstorm',
       'color': const Color(0xFFE2C541)
     },
@@ -71,13 +71,11 @@ class _RecommendationState extends State<Recommendation>
         const SizedBox(height: 20),
         AnimatedContainer(
           duration: const Duration(milliseconds: 150),
-          height: isMorePressed ? 300.0 : 100.0, // Adjust heights as needed
+          height: isMorePressed ? 300.0 : 110.0, // Adjust heights as needed
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: SingleChildScrollView(
-              physics: isMorePressed
-                  ? const NeverScrollableScrollPhysics()
-                  : const BouncingScrollPhysics(),
+              physics: const NeverScrollableScrollPhysics(),
               child: Wrap(
                 alignment: WrapAlignment.center,
                 direction: Axis.horizontal,
@@ -86,7 +84,7 @@ class _RecommendationState extends State<Recommendation>
                 children: [
                   for (var i = 0; i < 4; i++)
                     CustomButton(
-                      icon: options[i]['icon'],
+                      svgSrc: options[i]['icon'],
                       label: options[i]['label'],
                       iconColor: options[i]['color'],
                       onPressed: () =>
@@ -94,7 +92,7 @@ class _RecommendationState extends State<Recommendation>
                     ),
 
                   if(!isMorePressed) CustomButton(
-                    icon: null,
+                    svgSrc: null,
                     label: 'More',
                     iconColor: null,
                     onPressed: () {
@@ -106,7 +104,7 @@ class _RecommendationState extends State<Recommendation>
 
                   for (var i = 4; i < options.length; i++)
                     CustomButton(
-                      icon: options[i]['icon'],
+                      svgSrc: options[i]['icon'],
                       label: options[i]['label'],
                       iconColor: options[i]['color'],
                       onPressed: () =>

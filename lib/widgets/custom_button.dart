@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class CustomButton extends StatelessWidget {
-  final IconData? icon;
+  final String? svgSrc;
   final String label;
   final Color? iconColor;
   final VoidCallback? onPressed;
 
   const CustomButton({
-    required this.icon,
+    required this.svgSrc,
     required this.label,
     required this.iconColor,
     this.onPressed,
@@ -24,11 +25,11 @@ class CustomButton extends StatelessWidget {
         }
       },
           child: Container(
-      padding: const EdgeInsets.all(10),
+      padding:svgSrc != null ? const EdgeInsets.symmetric(vertical: 8, horizontal: 12) : const EdgeInsets.symmetric(vertical: 10, horizontal: 12),
       //border
       decoration: BoxDecoration(
         border: Border.all(
-          color: Colors.white38,
+          color: const Color(0xFF4E4E4E),
           width: 1,
         ),
         borderRadius: BorderRadius.circular(50),
@@ -36,11 +37,17 @@ class CustomButton extends StatelessWidget {
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          if (icon != null) Icon(
-            icon,
-            size: 20,
-            color: iconColor,
-          ),
+          // if (icon != null) Icon(
+          //   icon,
+          //   size: 20,
+          //   color: iconColor,
+          // ),
+          if(svgSrc != null)
+            SvgPicture.asset(
+              svgSrc!,
+              color: iconColor,
+              height: 26,
+            ),
           // if (icon != null) const SizedBox(width: 10),
           Padding(padding: const EdgeInsets.symmetric(horizontal: 6),
           child:
@@ -48,7 +55,8 @@ class CustomButton extends StatelessWidget {
             label,
             style: const TextStyle(
               fontSize: 14.0,
-              color: Colors.white38,
+              color: const Color(0xFF707070),
+              fontWeight: FontWeight.w600,
             ),
           )
           ),

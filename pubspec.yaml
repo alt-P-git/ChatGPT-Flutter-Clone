@@ -67,6 +67,15 @@ flutter:
     - assets/icons/logo.svg
     - assets/icons/explore.svg
     - assets/icons/edit.svg
+    - assets/icons/createImage.svg
+    - assets/icons/surpriseMe.svg
+    - assets/icons/analyzeData.svg
+    - assets/icons/code.svg
+    - assets/icons/summarizeText.svg
+    - assets/icons/helpMeWrite.svg
+    - assets/icons/analyzeImages.svg
+    - assets/icons/getAdvice.svg
+    - assets/icons/makeAPlan.svg
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
