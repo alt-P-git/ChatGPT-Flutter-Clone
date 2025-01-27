@@ -127,7 +127,7 @@ class _SearchScreenState extends State<SearchScreen> {
                       'ChatGPT',
                       style: TextStyle(
                           color: Color(0xFFE6E6E6),
-                          fontSize: 18,
+                          fontSize: 16,
                           fontWeight: FontWeight.w500),
                     ),
                   ],
@@ -153,7 +153,7 @@ class _SearchScreenState extends State<SearchScreen> {
                       'Explore GPTs',
                       style: TextStyle(
                           color: Color(0xFFE6E6E6),
-                          fontSize: 18,
+                          fontSize: 16,
                           fontWeight: FontWeight.w500),
                     ),
                   ],

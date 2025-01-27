@@ -25,7 +25,7 @@ class CustomButton extends StatelessWidget {
         }
       },
           child: Container(
-      padding:svgSrc != null ? const EdgeInsets.symmetric(vertical: 8, horizontal: 12) : const EdgeInsets.symmetric(vertical: 10, horizontal: 12),
+      padding:svgSrc != null ? const EdgeInsets.symmetric(vertical: 6, horizontal: 14) : const EdgeInsets.symmetric(vertical: 8, horizontal: 14),
       //border
       decoration: BoxDecoration(
         border: Border.all(

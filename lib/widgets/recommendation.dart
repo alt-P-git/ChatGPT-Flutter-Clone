@@ -25,9 +25,9 @@ class _RecommendationState extends State<Recommendation>
       'color': const Color(0xFF76D0EB)
     },
     {
-      'icon': 'assets/icons/analyzeData.svg',
-      'label': 'Analyze data',
-      'color': const Color(0xFF76D0EB)
+      'icon': 'assets/icons/makeAPlan.svg',
+      'label': 'Brainstorm',
+      'color': const Color(0xFFE2C541)
     },
     {'icon': 'assets/icons/code.svg', 'label': 'Code', 'color': const Color(0xFF6C71FF)},
     {
@@ -52,9 +52,9 @@ class _RecommendationState extends State<Recommendation>
       'color': const Color(0xFFE2C541)
     },
     {
-      'icon': 'assets/icons/makeAPlan.svg',
-      'label': 'Brainstorm',
-      'color': const Color(0xFFE2C541)
+      'icon': 'assets/icons/analyzeData.svg',
+      'label': 'Analyze data',
+      'color': const Color(0xFF76D0EB)
     },
   ];
 
@@ -82,7 +82,7 @@ class _RecommendationState extends State<Recommendation>
                 spacing: 10.0,
                 runSpacing: 16.0,
                 children: [
-                  for (var i = 0; i < 4; i++)
+                  for (var i = 0; i < 3; i++)
                     CustomButton(
                       svgSrc: options[i]['icon'],
                       label: options[i]['label'],
@@ -102,7 +102,8 @@ class _RecommendationState extends State<Recommendation>
                     },
                   ),
 
-                  for (var i = 4; i < options.length; i++)
+                  if(isMorePressed)
+                  for (var i = 3; i < options.length; i++)
                     CustomButton(
                       svgSrc: options[i]['icon'],
                       label: options[i]['label'],

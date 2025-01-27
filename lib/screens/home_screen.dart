@@ -191,8 +191,8 @@ class _HomeScreenState extends State<HomeScreen>
                                 const SizedBox(width: 10),
                                 Image.asset(
                                   'assets/icons/gptStar.png',
-                                  width: 14,
-                                  height: 14,
+                                  width: 12,
+                                  height: 12,
                                 ),
                               ],
                             ),
